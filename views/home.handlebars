@@ -1,0 +1,11 @@
+
+{{#if logged_in}}
+<h3>Blog Posts</h3>
+{{!-- Loop over each object in the posts array --}}
+{{#each posts as |post|}}
+  {{!-- Display the post title --}}
+  <h4>{{title}}</h4>
+  {{!-- Display the post body --}}
+  <p>{{content}}</p>
+{{/each}}
+{{/if}}

@@ -1,0 +1,25 @@
+{{#if logged_in}}
+<div style="text-align:center">
+<h3>Share Your Story</h3>
+<br>
+<button style="margin:10px">New Post</button>
+</div>
+<br>
+<br>
+<br>
+<div style="text-align:center">
+<h3>Your Posts</h3>
+<br>
+  {{!-- Loop over each object in the posts array --}}
+  {{#if posts}}
+    {{#each posts as |post|}}
+      {{!-- Display the post title --}}
+      <h4>{{title}}</h4>
+      {{!-- Display the post body --}}
+      <p>{{content}}</p>
+    {{/each}}
+  {{else}}
+    <p>You haven't posted anything.</p>
+  {{/if}}
+</div>
+{{/if}}
